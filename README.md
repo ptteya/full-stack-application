@@ -1,4 +1,4 @@
-### 2. Start the Server
+### 1. Start the Server
   ```bash
   cd server
   npm install
@@ -6,7 +6,7 @@
   ```
  The server runs on http://localhost:5000.
 
-### 3. Start the Client
+### 2. Start the Client
 ```bash
 cd client
 npm install
