@@ -3,8 +3,8 @@ const baseUrl = 'http://localhost:5000';
 
 export const requester = async (method, url, data) => {
     const options = {
-        method, 
-        headers: {'Content-Type': 'applicetion/json'}
+        method,
+        headers: { 'Content-Type': 'application/json' }
     };
 
     if (data) {
