@@ -4,21 +4,22 @@ const { createContext, useState } = require("react");
 
 export const DocumentContext = createContext();
 
-export const DocumentProvider = ({children}) => {
+export const DocumentProvider = ({ children }) => {
     const [documents, setDocuments] = useState([]);
     const navigate = useNavigate();
 
     useState(() => {
         documentService.getAll()
-        .then(res => setDocuments(res))
-        .catch(error => console.error(error));
-    },[]);
+            .then(res => setDocuments(res))
+            .catch(error => console.error(error));
+    }, []);
 
     const create = async (values) => {
         const newDoc = await documentService.create(values);
-        setDocuments(state => [...state,newDoc ]);
+        setDocuments(state => [...state, newDoc]);
+        navigate('/');
     };
-    
+
     const edit = async (values) => {
         const newDoc = await documentService.edit(values);
         navigate('/');
