@@ -21,8 +21,8 @@ export const DocumentProvider = ({ children }) => {
     };
 
     const edit = async (values) => {
-        const newDoc = await documentService.edit(values);
-        navigate('/');
+        await documentService.edit(values._id, values);
+        navigate(`/details/${values._id}`);
     };
 
     const deleteDoc = async (docId) => {
