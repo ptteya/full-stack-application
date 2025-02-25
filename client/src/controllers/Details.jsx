@@ -15,7 +15,7 @@ const Details = () => {
         .catch(error => console.error(error));
     },[docId]);
 
-    const onDeleteClick = async (docId) => {
+    const onDeleteClick = async () => {
         await deleteDoc(docId);
     }
 
